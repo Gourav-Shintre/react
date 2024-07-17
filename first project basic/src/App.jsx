@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [counter, setCounter] = useState(11); // Using const and array destructuring for useState
+  const [counter, setCounter] = useState(0); // Using const and array destructuring for useState
 
 
   const addValue = () => {
@@ -19,6 +19,10 @@ function App() {
 
   }
 
+  const reset=()=>{
+    setCounter(0)
+  }
+
   return (
     <>
      <h1>Learning React project counter {counter} </h1>
@@ -26,7 +30,8 @@ function App() {
 
      <button onClick={addValue}>Add Value</button>{" "}
      
-     <button onClick={removeValue}>Remove value</button>
+     <button onClick={removeValue} disabled={counter===0}>Remove value</button>
+     <button onClick={reset}>Reset</button>
      <p>footer:{counter}</p>
     </>
   )
