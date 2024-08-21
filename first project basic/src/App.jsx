@@ -7,9 +7,12 @@ function App() {
 
 
   const addValue = () => {
-    // setCounter(counter + 1); // Increment counter using setCounter
+    // setCounter(counter + 1);
+    // setCounter(counter + 1);
+    // Increment counter using setCounter
+    // setCounter((prevCounter)=>prevCounter+1)
     setCounter((prevCounter)=>prevCounter+1)
-    setCounter((prevCounter)=>prevCounter+1)
+    console.log(counter); 
 
 
   };
